@@ -14,10 +14,11 @@ interface RequestInterface {
 
 
     @POST("user-register")
-    fun register(@Query("name") name:String,
-             @Query("email") file_id:String,
-             @Query("phone") phone:String,
-                 @Query("password") password:String,
-             @Query("message") message:String
+    fun register(
+        @Query("name") name:String,
+        @Query("email") file_id:String,
+        @Query("phone") phone:String,
+        @Query("password") password:String,
+        @Query("message") message:String
     ): Observable<RegisterResponse>
 }
