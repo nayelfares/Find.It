@@ -1,20 +1,19 @@
 package com.emarketing.findit.data
 
-data class Site(val result:SiteDetails)
+import java.util.ArrayList
+
+data class Site(val tags:ArrayList<Tag>,val result:SiteDetails,val photos:ArrayList<String>)
 
 data class SiteDetails(
     val id:Long,
     val name:String,
-    val city:String,
     val description:String?,
     val opening_hours:String?,
-    val email:String?,
-    val phone:String?,
+    val email:String,
+    val phone:String,
     val latitude:String?,
     val longitude:String?,
-    val facebook:String?,
-    val instagram:String?,
-    val snapchat:String?,
-    val whatsapp:String?,
-    val website:String?
+    val image:String
 )
+
+data class SearchResult(val success:Boolean,val message:String,val data:ArrayList<Site>)

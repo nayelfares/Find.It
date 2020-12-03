@@ -24,4 +24,11 @@ interface RequestInterface {
 
     @POST("center/initialize_search")
     fun getFilters(): Observable<Filters>
+
+    @POST("center/with_filters")
+    fun search(
+        @Query("tag") tag:Long,
+        @Query("category") category:Long,
+        @Query("city") city:Long
+    ): Observable<SearchResult>
 }

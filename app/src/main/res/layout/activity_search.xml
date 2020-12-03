@@ -21,40 +21,50 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:id="@+id/toolbar"
-                android:text="Find IT"
+                android:text="@string/app_name"
                 android:background="@color/colorAccent"
                 android:textSize="44sp"
-                android:layout_alignParentTop="true"
                 android:textColor="@color/white"
                 android:translationZ="1dp"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:fontFamily="@font/yellowtail"/>
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/black"
-                android:hint="type search text here"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:id="@+id/searchText"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Spinner android:id="@+id/city"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
-                <Spinner android:id="@+id/category"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
-                <Spinner android:id="@+id/tag"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"/>
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filters"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold|italic"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <Spinner android:id="@+id/city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
+                        <Spinner android:id="@+id/category"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
+                        <Spinner android:id="@+id/tag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"/>
+                </LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:text="@string/search"
+                    android:padding="8dp"
+                    android:textSize="14sp"/>
             </LinearLayout>
         </LinearLayout>
 

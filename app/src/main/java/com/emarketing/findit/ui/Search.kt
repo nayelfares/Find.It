@@ -5,14 +5,11 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.emarketing.findit.R
-import com.emarketing.findit.data.Category
-import com.emarketing.findit.data.City
-import com.emarketing.findit.data.Filters
-import com.emarketing.findit.data.Tag
+import com.emarketing.findit.data.*
 import com.emarketing.findit.mvvm.BaseActivity
 import com.emarketing.findit.vm.SearchViewModel
 import kotlinx.android.synthetic.main.activity_search.*
-import java.util.ArrayList
+
 
 
 class Search : BaseActivity(),SearchView{
@@ -87,6 +84,14 @@ class Search : BaseActivity(),SearchView{
         cities=filters.cities
         for (city in cities)
             allCities.add(city.name)
+    }
+
+    override fun searchOnSuccess(data: ArrayList<Site>) {
+
+    }
+
+    override fun searchOnFailer(message: String) {
+
     }
 
 }
