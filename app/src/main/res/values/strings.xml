@@ -2,4 +2,19 @@
     <string name="app_name">Find IT</string>
     <string name="filters">Filters</string>
     <string name="search">Search</string>
+    <string name="create_business_account">Create Business Account\"</string>
+    <string name="quick_search">Quick Search</string>
+    <string name="bussiness_account">Business Account</string>
+    <string name="user_name">User Name</string>
+    <string name="type_valid_username">type valid username</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="xxxxxxxxxx">XXXXXXXXXX</string>
+    <string name="email_address">Email Address</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="password">Password</string>
+    <string name="password_hint">**********</string>
+    <string name="message">Message</string>
+    <string name="type_message_to_admin">type message to admin</string>
+    <string name="register">Register</string>
+    <string name="cancel">Cancel</string>
 </resources>

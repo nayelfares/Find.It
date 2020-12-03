@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Find IT"
+        android:text="@string/app_name"
         android:textSize="44sp"
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/white"
@@ -32,7 +32,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.536" />
+        app:layout_constraintVertical_bias="0.536"
+        android:contentDescription="@string/app_name" />
 
     <Button
         android:layout_width="match_parent"
@@ -43,7 +44,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:text="Create Business Account"
+        android:text="@string/create_business_account"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textStyle="bold"
@@ -60,7 +61,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:textAllCaps="false"
-        android:text="Quick Search"
+        android:text="@string/quick_search"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textSize="18sp"

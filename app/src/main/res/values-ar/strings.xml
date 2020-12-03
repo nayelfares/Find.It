@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Find IT</string>
+    <string name="filters">عوامل التصفية</string>
+    <string name="search">بحث</string>
+    <string name="create_business_account">إنشاء حساب أعمال</string>
+    <string name="quick_search">بحث سريع</string>
+    <string name="bussiness_account">حساب الأعمال</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="type_valid_username">اكتب اسم مستخدم صالح</string>
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="xxxxxxxxxx">XXXXXXXX</string>
+    <string name="password_hint">********</string>
+    <string name="email_hint">email@example.com</string>
+    <string name="password">كلمة السر</string>
+    <string name="email_address">عنوان البريد الالكتروني</string>
+    <string name="message">رسالة</string>
+    <string name="type_message_to_admin">اكتب رسالة للمدير</string>
+    <string name="register">تسجيل</string>
+    <string name="cancel">إلغاء</string>
+</resources>
