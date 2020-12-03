@@ -21,4 +21,7 @@ interface RequestInterface {
         @Query("password") password:String,
         @Query("message") message:String
     ): Observable<RegisterResponse>
+
+    @POST("center/initialize_search")
+    fun getFilters(): Observable<Filters>
 }

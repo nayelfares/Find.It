@@ -5,6 +5,10 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import com.emarketing.findit.R
+import com.emarketing.findit.data.Category
+import com.emarketing.findit.data.City
+import com.emarketing.findit.data.Filters
+import com.emarketing.findit.data.Tag
 import com.emarketing.findit.mvvm.BaseActivity
 import com.emarketing.findit.vm.SearchViewModel
 import kotlinx.android.synthetic.main.activity_search.*
@@ -13,6 +17,9 @@ import java.util.ArrayList
 
 class Search : BaseActivity(),SearchView{
     lateinit var searchViewModel: SearchViewModel
+    var cities=ArrayList<City>()
+    var categories=ArrayList<Category>()
+    var tags =ArrayList<Tag>()
     val allCities=ArrayList<String>()
     val allCategories=ArrayList<String>()
     val allTages=ArrayList<String>()
@@ -21,6 +28,8 @@ class Search : BaseActivity(),SearchView{
         setContentView(R.layout.activity_search)
         searchViewModel=SearchViewModel(this, this)
         initLists()
+        searchViewModel.getFilters()
+        loading()
     }
 
     fun initLists(){
@@ -59,6 +68,25 @@ class Search : BaseActivity(),SearchView{
             override fun onNothingSelected(p0: AdapterView<*>?) {}
 
         }
+    }
+
+    override fun getFiltersOnFailer(message: String) {
+        stopLoading()
+        showMessage(message)
+        finish()
+    }
+
+    override fun getFiltersOnSuccess(filters: Filters) {
+        stopLoading()
+        tags=filters.tags
+        for (tag in tags)
+            allTages.add(tag.name)
+        categories=filters.categories
+        for (category in categories)
+            allCategories.add(category.name)
+        cities=filters.cities
+        for (city in cities)
+            allCities.add(city.name)
     }
 
 }

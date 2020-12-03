@@ -14,8 +14,8 @@ class RegisterViewModel(val registerView: RegisterView, val context: Context) {
 
     fun register(name:String,email:String,phone:String,password:String,message:String){
         val apiManager= MainAPIManager().provideRetrofitInterface().create(RequestInterface::class.java)
-        val loginVar  = apiManager.register(name,email,phone,password,message)
-        loginVar.subscribeOn(Schedulers.io())
+        val registerVar  = apiManager.register(name,email,phone,password,message)
+        registerVar.subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(object : Observer<RegisterResponse> {
                 override fun onComplete() { }
