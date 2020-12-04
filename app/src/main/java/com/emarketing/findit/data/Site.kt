@@ -1,8 +1,11 @@
 package com.emarketing.findit.data
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 import java.util.ArrayList
 
-
+@Parcelize
 data class Site(
     val name: String,
     val description: String?,
@@ -12,7 +15,8 @@ data class Site(
     val latitude: String?,
     val longitude: String?,
     val profile_photo: String,
-    val city_name: String
-)
+    val city_name: String,
+    val photos:@RawValue ArrayList<String>?
+): Parcelable
 
 data class SearchResult(val success:Boolean,val message:String,val data:ArrayList<Site>)

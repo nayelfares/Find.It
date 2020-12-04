@@ -11,6 +11,7 @@ import com.bumptech.glide.Glide
 import com.emarketing.findit.R
 import com.emarketing.findit.api.toUrl
 import com.emarketing.findit.data.Site
+import com.emarketing.findit.ui.LocationDetails
 import kotlinx.android.synthetic.main.search_item_row.view.*
 
 
@@ -30,17 +31,20 @@ class ResultAdapter(val context:Context, val results:ArrayList<Site>) : Recycler
         holder.description.text=result.description
         holder.name.text=result.name
 
-        holder.itemView.setOnClickListener {
-            val link="https://maps.google.com/?q=${result.latitude},${result.longitude}"
-            try {
-
-                val browserIntent = Intent(
-                    Intent.ACTION_VIEW,
-                    Uri.parse(link)
-                )
-                context.startActivity(browserIntent)
-            } catch (e: Exception) {
-            }
+        holder.image.setOnClickListener {
+            val intent=Intent(context,LocationDetails::class.java)
+            intent.putExtra("location", result)
+            context.startActivity(intent)
+//            val link="https://maps.google.com/?q=${result.latitude},${result.longitude}"
+//            try {
+//
+//                val browserIntent = Intent(
+//                    Intent.ACTION_VIEW,
+//                    Uri.parse(link)
+//                )
+//                context.startActivity(browserIntent)
+//            } catch (e: Exception) {
+//            }
         }
     }
 
