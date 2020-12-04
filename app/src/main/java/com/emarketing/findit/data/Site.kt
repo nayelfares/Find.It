@@ -16,6 +16,7 @@ data class Site(
     val longitude: String?,
     val profile_photo: String,
     val city_name: String,
+    val address:String?,
     val photos:@RawValue ArrayList<String>
 ): Parcelable
 

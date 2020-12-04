@@ -26,4 +26,7 @@
     <string name="select_city">Select city</string>
     <string name="select_category">Select category</string>
     <string name="select_tag">Select tag</string>
+    <string name="address">Address  :</string>
+    <string name="email">Email address :</string>
+    <string name="phone">Phone number :</string>
 </resources>
