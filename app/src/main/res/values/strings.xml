@@ -2,7 +2,7 @@
     <string name="app_name">Find IT</string>
     <string name="filters">Filters</string>
     <string name="search">Search</string>
-    <string name="create_business_account">Create Business Account\"</string>
+    <string name="create_business_account">Create Business Account</string>
     <string name="quick_search">Quick Search</string>
     <string name="bussiness_account">Business Account</string>
     <string name="user_name">User Name</string>
@@ -18,4 +18,12 @@
     <string name="register">Register</string>
     <string name="cancel">Cancel</string>
     <string name="generalBrowsing">General Browsing</string>
+    <string name="location_details">Location Details :</string>
+    <string name="location_name">Location Name :</string>
+    <string name="opening_hours">Opening hours :</string>
+    <string name="no_photos">No photos for this location</string>
+    <string name="no_results">No Results</string>
+    <string name="select_city">Select city</string>
+    <string name="select_category">Select category</string>
+    <string name="select_tag">Select tag</string>
 </resources>

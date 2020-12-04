@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.emarketing.findit.R
+import com.emarketing.findit.api.toUrl
 import kotlinx.android.synthetic.main.photo_item.view.*
 
 
@@ -19,7 +20,7 @@ class PhotoAdapter(val context:Context, val photos:ArrayList<String>) : Recycler
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context)
-            .load(photos[position])
+            .load(photos[position].toUrl())
             .into(holder.image)
     }
 

@@ -29,7 +29,7 @@ class CategoryAdapter(val context:Context, val categories:ArrayList<Category>) :
             .load(category.image.toUrl())
             .into(holder.icon)
         if (position%2==0)
-            holder.row.setBackgroundColor(context.getColor(R.color.colorPrimary))
+            holder.row.setBackgroundColor(context.getColor(R.color.colorAccentTransparence))
         else
             holder.row.setBackgroundColor(context.getColor(R.color.white))
         holder.row.setOnClickListener {

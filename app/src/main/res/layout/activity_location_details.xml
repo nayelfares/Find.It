@@ -42,27 +42,90 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/name"
-               android:textSize="18sp"
-               android:layout_marginTop="8dp"
-               android:textColor="@color/black"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_name"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:clickable="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textAlignment="viewStart"
+                    android:id="@+id/name"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/city"
                 android:textSize="16sp"
+                android:paddingStart="16dp"
+                android:textAlignment="viewStart"
                 android:layout_marginTop="8dp"
                 android:textColor="@color/black"/>
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/details"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:textColor="@color/black"/>
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/location_details"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:clickable="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/description"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/opening_hours"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:clickable="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/openingHours"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:textColorLink="@color/colorPrimary"
+                    android:clickable="true"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -72,6 +135,16 @@
                 android:textColorLink="@color/colorPrimary"
                 android:clickable="true"
                 android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="@string/no_photos"
+                android:fontFamily="@font/yellowtail"
+                android:textSize="32sp"
+                android:id="@+id/noResults"
+                android:visibility="gone"/>
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -39,9 +39,9 @@ class Search : BaseActivity(),SearchView{
     }
 
     fun initLists(){
-        allCities.add("Select city")
-        allCategories.add("Select category")
-        allTages.add("Select tag")
+        allCities.add(resources.getString(R.string.select_city))
+        allCategories.add(resources.getString(R.string.select_category))
+        allTages.add(resources.getString(R.string.select_tag))
         val citiesAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, allCities)
         citiesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         city.adapter = citiesAdapter

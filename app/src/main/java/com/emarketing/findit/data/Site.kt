@@ -16,7 +16,7 @@ data class Site(
     val longitude: String?,
     val profile_photo: String,
     val city_name: String,
-    val photos:@RawValue ArrayList<String>?
+    val photos:@RawValue ArrayList<String>
 ): Parcelable
 
 data class SearchResult(val success:Boolean,val message:String,val data:ArrayList<Site>)
