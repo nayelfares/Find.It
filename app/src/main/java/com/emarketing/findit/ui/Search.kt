@@ -7,6 +7,7 @@ import android.widget.ArrayAdapter
 import com.emarketing.findit.R
 import com.emarketing.findit.data.*
 import com.emarketing.findit.mvvm.BaseActivity
+import com.emarketing.findit.vm.ResultAdapter
 import com.emarketing.findit.vm.SearchViewModel
 import kotlinx.android.synthetic.main.activity_search.*
 
@@ -26,6 +27,7 @@ class Search : BaseActivity(),SearchView{
         searchViewModel=SearchViewModel(this, this)
         initLists()
         searchViewModel.getFilters()
+        searchViewModel.search(null,null,null)
         loading()
     }
 
@@ -38,7 +40,16 @@ class Search : BaseActivity(),SearchView{
         city.adapter = citiesAdapter
         city.onItemSelectedListener= object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                showMessage(allCities[p2])
+                if (p2!=0){
+                    var categoryId:Long?=null
+                    if (category.selectedItemPosition!=0) {
+                        categoryId = categories[category.selectedItemPosition-1].id
+                    }
+                    var tagId:Long?=null
+                    if (tag.selectedItemPosition!=0)
+                        tagId=tags[tag.selectedItemPosition-1].id
+                    searchViewModel.search(cities[p2-1].id,categoryId,tagId)
+                }
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
 
@@ -49,7 +60,16 @@ class Search : BaseActivity(),SearchView{
         category.adapter = categoriesAdapter
         category.onItemSelectedListener= object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                showMessage(allCategories[p2])
+                if (p2!=0){
+                    var cityId:Long?=null
+                    if (city.selectedItemPosition!=0) {
+                        cityId = cities[city.selectedItemPosition-1].id
+                    }
+                    var tagId:Long?=null
+                    if (tag.selectedItemPosition!=0)
+                        tagId=tags[tag.selectedItemPosition-1].id
+                    searchViewModel.search(cityId,categories[p2-1].id,tagId)
+                }
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
 
@@ -60,7 +80,17 @@ class Search : BaseActivity(),SearchView{
         tag.adapter = tagAdapter
         tag.onItemSelectedListener= object :AdapterView.OnItemSelectedListener{
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
-                showMessage(allTages[p2])
+                if (p2!=0){
+                    var cityId:Long?=null
+                    if (city.selectedItemPosition!=0) {
+                        cityId = cities[city.selectedItemPosition-1].id
+                    }
+                    var categoryId:Long?=null
+                    if (category.selectedItemPosition!=0) {
+                        categoryId = categories[category.selectedItemPosition-1].id
+                    }
+                    searchViewModel.search(cityId,categoryId,tags[p2-1].id)
+                }
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
 
@@ -87,11 +117,16 @@ class Search : BaseActivity(),SearchView{
     }
 
     override fun searchOnSuccess(data: ArrayList<Site>) {
-
+        stopLoading()
+        if (data.isEmpty())
+            noResults.visibility=View.VISIBLE
+        else
+            noResults.visibility=View.GONE
+        content.adapter=ResultAdapter(this,data)
     }
 
     override fun searchOnFailer(message: String) {
-
+        stopLoading()
     }
 
 }

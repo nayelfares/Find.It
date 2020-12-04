@@ -31,3 +31,8 @@ open class MainAPIManager {
                 .build()
     }
 }
+
+
+fun String.toUrl():String{
+    return "https://findit.towarddevelopment.org/$this"
+}

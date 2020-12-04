@@ -30,7 +30,7 @@ class SearchViewModel(val searchView: SearchView, val context: Context) {
             })
     }
 
-    fun search(cityId:Long,categoryId:Long,tagId:Long){
+    fun search(cityId:Long?,categoryId:Long?,tagId:Long?){
         val apiManager= MainAPIManager().provideRetrofitInterface().create(RequestInterface::class.java)
         val filtersVar  = apiManager.search(tagId,categoryId,cityId)
         filtersVar.subscribeOn(Schedulers.io())
