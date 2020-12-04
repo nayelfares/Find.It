@@ -25,9 +25,16 @@ class Search : BaseActivity(),SearchView{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
         searchViewModel=SearchViewModel(this, this)
-        initLists()
-        searchViewModel.getFilters()
-        searchViewModel.search(null,null,null)
+        val fromCategory= intent.getBooleanExtra("fromCategory",false)
+        val categoryId=intent.getLongExtra("categoryId",0)
+        if (fromCategory){
+            searchViewModel.search(null, categoryId, null)
+            userPanel.visibility=View.GONE
+        }else {
+            initLists()
+            searchViewModel.getFilters()
+            searchViewModel.search(null, null, null)
+        }
         loading()
     }
 

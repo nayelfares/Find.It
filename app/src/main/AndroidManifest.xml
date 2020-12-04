@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Fullscreen">
-        <activity android:name=".ui.LocationDetails"></activity>
+        <activity android:name=".ui.GeneralBrowsing"></activity>
+        <activity android:name=".ui.LocationDetails" />
         <activity android:name=".ui.Search" />
         <activity android:name=".ui.Register" />
         <activity android:name=".MainActivity">

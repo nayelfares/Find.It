@@ -31,4 +31,7 @@ interface RequestInterface {
         @Query("category") category:Long?,
         @Query("city") city:Long?
     ): Observable<SearchResult>
+
+    @GET("category")
+    fun getCategories(): Observable<CategoryResult>
 }
