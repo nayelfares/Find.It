@@ -26,8 +26,14 @@ class LocationDetails : BaseActivity() {
         city.text=currentLocation.city_name
         description.text=currentLocation.description
         openingHours.text=currentLocation.opening_hours
-        phone.text=currentLocation.phone
-        email.text=currentLocation.email
+        if (currentLocation.phone!=null)
+            phone.text=currentLocation.phone
+        else
+            phoneContainer.visibility=View.GONE
+        if (currentLocation.email!=null)
+            email.text=currentLocation.email
+        else
+            emailContainer.visibility=View.GONE
         address.text=currentLocation.address
         val loc="<a href='https://maps.google.com/?q=${currentLocation.latitude},${currentLocation.longitude}'>https://maps.google.com/?q=${currentLocation.latitude},${currentLocation.longitude}</a>"
         mapsLocation.text= HtmlCompat.fromHtml(loc, HtmlCompat.FROM_HTML_MODE_LEGACY)

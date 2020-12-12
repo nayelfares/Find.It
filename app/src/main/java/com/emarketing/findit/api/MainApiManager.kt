@@ -33,6 +33,6 @@ open class MainAPIManager {
 }
 
 
-fun String.toUrl():String{
+fun String?.toUrl():String{
     return "https://findit.towarddevelopment.org/$this"
 }
