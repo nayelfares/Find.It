@@ -24,6 +24,9 @@ class Search : BaseActivity(),SearchView{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
+        getMore.setOnRefreshListener {
+            getMore.setRefreshing(false)
+        }
         searchViewModel=SearchViewModel(this, this)
         val fromCategory= intent.getBooleanExtra("fromCategory",false)
         val categoryId=intent.getLongExtra("categoryId",0)

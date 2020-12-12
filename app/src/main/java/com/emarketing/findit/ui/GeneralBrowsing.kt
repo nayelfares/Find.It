@@ -13,6 +13,7 @@ class GeneralBrowsing : BaseActivity(),GeneralBrowsingView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_general_browsing)
+        getMore.setOnRefreshListener { getMore.setRefreshing(false) }
         generalBrowsingViewModel= GeneralBrowsingViewModel(this,this)
         loading()
         generalBrowsingViewModel.getCategories()
