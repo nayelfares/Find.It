@@ -139,7 +139,6 @@
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
-                    android:clickable="true"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="0dp"
@@ -148,6 +147,7 @@
                     android:id="@+id/phone"
                     android:textAlignment="viewStart"
                     android:textSize="14sp"
+                    android:autoLink="phone"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
                     android:clickable="true"
@@ -166,7 +166,6 @@
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
-                    android:clickable="true"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="0dp"
@@ -175,6 +174,7 @@
                     android:id="@+id/email"
                     android:textAlignment="viewStart"
                     android:textSize="14sp"
+                    android:autoLink="email"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
                     android:clickable="true"
@@ -191,9 +191,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/facebook"
                     android:textSize="14sp"
+                    android:autoLink="web"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
-                    android:clickable="true"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="0dp"
@@ -205,6 +205,7 @@
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
                     android:clickable="true"
+                    android:autoLink="web"
                     android:textColor="@color/black"/>
             </LinearLayout>
             <LinearLayout
@@ -231,6 +232,7 @@
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
+                    android:autoLink="web"
                     android:clickable="true"
                     android:textColor="@color/black"/>
             </LinearLayout>
@@ -255,6 +257,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/snapchat"
                     android:textAlignment="viewStart"
+                    android:autoLink="web"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
@@ -281,6 +284,7 @@
                     android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:id="@+id/whatsapp"
+                    android:autoLink="phone"
                     android:textAlignment="viewStart"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
@@ -310,6 +314,7 @@
                     android:id="@+id/youtube"
                     android:textAlignment="viewStart"
                     android:textSize="14sp"
+                    android:autoLink="web"
                     android:layout_marginTop="8dp"
                     android:textColorLink="@color/colorPrimary"
                     android:clickable="true"
