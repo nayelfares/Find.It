@@ -15,6 +15,11 @@ data class Site(
     val latitude: String?,
     val longitude: String?,
     val profile_photo: String?,
+    val facebook:String?,
+    val instagram:String?,
+    val snapchat:String?,
+    val whatsapp:String?,
+    val youtube:String?,
     val city_name: String,
     val address:String?,
     val photos:@RawValue ArrayList<String>

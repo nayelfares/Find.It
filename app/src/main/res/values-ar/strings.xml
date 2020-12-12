@@ -23,11 +23,16 @@
     <string name="location_name">اسم الموقع :</string>
     <string name="opening_hours">ساعات العمل :</string>
     <string name="no_photos">لا يوجد صور لهذا المكان</string>
-    <string name="no_results">لا يوجد نتاذج</string>
+    <string name="no_results">لا يوجد نتائج</string>
     <string name="select_city">اختر مدينة</string>
     <string name="select_category">اختر تصنيف</string>
     <string name="select_tag">اختر علامة</string>
     <string name="address">العنوان  :</string>
     <string name="email">البريد الالكتروني :</string>
     <string name="phone">رقم الهاتف :</string>
+    <string name="facebook">فيسبوك :</string>
+    <string name="instagram">انستجرام</string>
+    <string name="snapchat">سناب شات :</string>
+    <string name="whatsapp">واتساب :</string>
+    <string name="youtube">يوتيوب :</string>
 </resources>

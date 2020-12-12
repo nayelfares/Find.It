@@ -34,6 +34,26 @@ class LocationDetails : BaseActivity() {
             email.text=currentLocation.email
         else
             emailContainer.visibility=View.GONE
+        if (currentLocation.facebook!=null)
+            facebook.text=currentLocation.facebook
+        else
+            facebookContainer.visibility=View.GONE
+        if (currentLocation.instagram!=null)
+            instagram.text=currentLocation.instagram
+        else
+            instagramContainer.visibility=View.GONE
+        if (currentLocation.snapchat!=null)
+            snapchat.text=currentLocation.snapchat
+        else
+            snapchatContainer.visibility=View.GONE
+        if (currentLocation.whatsapp!=null)
+            whatsapp.text=currentLocation.whatsapp
+        else
+            whatsappContainer.visibility=View.GONE
+        if (currentLocation.youtube!=null)
+            youtube.text=currentLocation.youtube
+        else
+            youtubeContainer.visibility=View.GONE
         address.text=currentLocation.address
         val loc="<a href='https://maps.google.com/?q=${currentLocation.latitude},${currentLocation.longitude}'>https://maps.google.com/?q=${currentLocation.latitude},${currentLocation.longitude}</a>"
         mapsLocation.text= HtmlCompat.fromHtml(loc, HtmlCompat.FROM_HTML_MODE_LEGACY)
